@@ -25,7 +25,14 @@ class MainActivity : AppCompatActivity() {
         mTabMenuAdapter!!.setTabMenuList(mTabMenuDataList)
         mTabMenuAdapter!!.setScreenWidth(resources.displayMetrics.widthPixels)
         mTabMenuAdapter!!.setSelectedPosition(mTabMenuSelectedPosition)
+
         mBinding!!.recyclerTabMenu.adapter= mTabMenuAdapter
+        mBinding!!.recyclerTabMenu.layoutManager = LinearLayoutManager(
+            this,
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
+
         initView()
 
         tabSelect()
