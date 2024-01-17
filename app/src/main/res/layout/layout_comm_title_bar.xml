@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comm_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:importantForAccessibility="no">
+
+    <!--
+        common title
+        1. 				    title
+        2.  back icon       title
+        3.                  title       zeropay icon
+        4.                  title       push icon
+        5.                  title       setting icon
+        9.  No TitleBar
+        10. back icon       title		push icon
+        11. back icon           		title
+        12.                 title       close icon (change icon)
+        13.
+        14.
+        15.
+        16. back icon       title       right icon
+    -->
+    <RelativeLayout
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:visibility="visible"
+        android:paddingStart="9dp"
+        android:paddingEnd="11dp">
+
+        <!--imageview left-->
+        <RelativeLayout
+            android:id="@+id/rl_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btn_title_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:accessibilityTraversalBefore="@id/tv_center_title"
+                android:background="@drawable/btn_navi_back"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <!--title center-->
+        <TextView
+            android:id="@+id/tv_center_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:textSize="15dp"
+            android:textColor="@color/color_222222"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="34dp"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:maxLines="1"
+            tools:text="title center" />
+
+        <!--imageview right-->
+        <RelativeLayout
+            android:id="@+id/rl_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btn_alarm"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/menu_top_selector_noti"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

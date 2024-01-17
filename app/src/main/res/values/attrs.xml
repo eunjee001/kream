@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- ********************* mVaccine START ********************* -->
+	    <declare-styleable name="ProgressWheel">
+            <attr name="mv_pw_text" format="string" />
+            <attr name="mv_pw_textColor" format="color" />
+            <attr name="mv_pw_textSize" format="dimension" />
+            <attr name="mv_pw_barColor" format="color" />
+            <attr name="mv_pw_rimColor" format="color" />
+            <attr name="mv_pw_rimWidth" format="dimension" />
+            <attr name="mv_pw_spinSpeed" format="dimension" />
+            <attr name="mv_pw_delayMillis" format="integer" />
+            <attr name="mv_pw_circleColor" format="color" />
+            <attr name="mv_pw_radius" format="dimension" />
+            <attr name="mv_pw_barWidth" format="dimension" />
+            <attr name="mv_pw_barLength" format="dimension" />
+            <attr name="mv_pw_contourColor" format="color"/>
+            <attr name="mv_pw_contourSize" format="dimension"/>
+        </declare-styleable>
+        <!-- ********************* mVaccine END ********************* -->
+
+        <!--ShadowView-->
+        <declare-styleable name="ShadowView">
+            <attr name="android:gravity" />
+        </declare-styleable>
+
+        <declare-styleable name="OtpViewTheme">
+                <attr format="reference" name="otpViewStyle"/>
+        </declare-styleable>
+
+        <declare-styleable name="OtpView">
+                <attr format="integer" name="OtpItemCount"/>
+                <attr format="dimension" name="OtpItemWidth"/>
+                <attr format="dimension" name="OtpItemHeight"/>
+                <attr format="dimension" name="OtpItemRadius"/>
+                <attr format="dimension" name="OtpItemSpacing"/>
+                <attr format="dimension" name="OtpLineWidth"/>
+                <attr format="reference|color" name="OtpLineColor"/>
+                <attr format="enum" name="OtpViewType">
+                        <enum name="rectangle" value="0"/>
+                        <enum name="line" value="1"/>
+                        <enum name="none" value="2"/>
+                </attr>
+                <attr name="android:cursorVisible"/>
+                <attr name="android:textAllCaps"/>
+                <attr format="dimension" name="OtpCursorWidth"/>
+                <attr format="reference|color" name="OtpCursorColor"/>
+                <attr name="android:itemBackground"/>
+                <attr format="boolean" name="OtpHideLineWhenFilled"/>
+                <attr format="boolean" name="OtpState_filled"/>
+                <attr format="boolean" name="OtpRtlTextDirection"/>
+                <attr format="string" name="OtpMaskingChar"/>
+        </declare-styleable>
+
+        <!--sticky header-->
+        <declare-styleable name="StickyScrollView">
+                <attr name="stuckShadowHeight" format="dimension" />
+                <attr name="stuckShadowDrawable" format="reference" />
+        </declare-styleable>
+
+        <!--Tab-->
+        <declare-styleable name="TabView">
+                <attr name="divider_style" format="reference" />
+        </declare-styleable>
+
+    <!--banner slide image view-->
+    <declare-styleable name="BannerSlideImageView">
+        <attr name="imageViewCornerRadius" format="float"/>
+    </declare-styleable>
+
+    <!--shimmer loading animation-->
+    <declare-styleable name="ShimmerFrameLayout">
+        <attr format="boolean" name="clip_to_children"/>
+        <attr format="boolean" name="colored"/>
+        <attr format="color" name="base_color"/>
+        <attr format="color" name="highlight_color"/>
+        <attr format="float" name="base_alpha"/>
+        <attr format="float" name="highlight_alpha"/>
+        <attr format="boolean" name="auto_start"/>
+        <attr format="integer" name="duration"/>
+        <attr format="integer" name="repeat_count"/>
+        <attr format="integer" name="repeat_delay"/>
+        <attr format="enum" name="repeat_mode">
+            <enum name="restart" value="1"/>
+            <enum name="reverse" value="2"/>
+        </attr>
+        <attr format="enum" name="direction">
+            <enum name="left_to_right" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="bottom_to_top" value="3"/>
+        </attr>
+        <attr format="float" name="dropoff"/>
+        <attr format="dimension" name="fixed_width"/>
+        <attr format="dimension" name="fixed_height"/>
+        <attr format="float" name="intensity"/>
+        <attr format="float" name="width_ratio"/>
+        <attr format="float" name="height_ratio"/>
+        <attr format="enum" name="shape">
+            <enum name="linear" value="0"/>
+            <enum name="radial" value="1"/>
+        </attr>
+        <attr format="float" name="tilt"/>
+    </declare-styleable>
+
+</resources>
