@@ -8,5 +8,5 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 class SlidingImagesAdapter (activity: FragmentActivity, private val itemsCount :Int) :FragmentStateAdapter(activity) {
     override fun getItemCount() = itemsCount
 
-    override fun createFragment(position: Int) = RecommendFragment.getInstance(position)
+    override fun createFragment(position: Int) = SlidingImageFragment.getInstance(position)
 }

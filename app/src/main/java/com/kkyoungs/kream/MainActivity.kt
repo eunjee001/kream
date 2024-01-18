@@ -3,6 +3,8 @@ package com.kkyoungs.kream
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kkyoungs.kream.databinding.ActivityMainBinding
 
@@ -11,6 +13,10 @@ class MainActivity : AppCompatActivity() {
     private var mTabMenuAdapter: TabMenuAdapter? = null
     private var mTabMenuDataList: ArrayList<String>? = null
     private var mTabMenuSelectedPosition = 0
+    private var fragmentManager : FragmentManager ?= null
+    private var transaction : FragmentTransaction ?= null
+    private var recommendFragment = RecommendFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -38,7 +44,13 @@ class MainActivity : AppCompatActivity() {
         tabSelect()
     }
 
-    fun initView() {
+    private fun initView() {
+        fragmentManager = supportFragmentManager
+        transaction = fragmentManager!!.beginTransaction()
+        fragmentManager!!
+            .beginTransaction()
+            .add(R.id.frameLayout, recommendFragment)
+            .commit()
 
     }
 
@@ -47,17 +59,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun tabSelect() {
+
         mTabMenuAdapter!!.setOnTabSelectedListener { position ->
-            if (position === mTabMenuSelectedPosition) return@setOnTabSelectedListener
 
-
-            if (mBinding!!.llTabWrapper.getHeight() <= mBinding!!.root
-                    .height - mBinding!!.commTitleBar.getHeight()
-            ) {
-                mTabMenuSelectedPosition = position
-                mTabMenuAdapter!!.setSelectedPosition(mTabMenuSelectedPosition)
+            if (position == 0){
+                fragmentManager!!
+                    .beginTransaction()
+                    .replace(R.id.frameLayout, recommendFragment)
+                    .addToBackStack(RecommendFragment::class.java.simpleName)
+                    .commit()
             }
-            val childCount: Int = mBinding!!.llTabWrapper.childCount
 
         }
 
