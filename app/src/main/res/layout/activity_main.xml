@@ -35,10 +35,8 @@
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/tab_menu_item_layout" />
 
-
-
-
 </LinearLayout>
+
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"

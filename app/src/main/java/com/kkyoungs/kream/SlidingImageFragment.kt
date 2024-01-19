@@ -29,17 +29,15 @@ class SlidingImageFragment : Fragment(R.layout.item_sliding) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = ItemSlidingBinding.inflate(inflater, container, false)
         val position = requireArguments().getInt(ARG_POSITION)
         val landingImagesArray = requireContext().resources.getStringArray(R.array.image_urls_array)
         val imageString = landingImagesArray[position]
-//        val id = resources.getIdentifier(imageString, "drawable", requireActivity().packageName)
-//        _binding!!.slidingImage.setImageResource(id)
+
         Glide.with(this)
             .load(imageString)
             .into(_binding!!.slidingImage);
-
 
         return binding.root
     }

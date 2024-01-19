@@ -54,10 +54,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun initMainTabLayout() {
-
-    }
-
     private fun tabSelect() {
 
         mTabMenuAdapter!!.setOnTabSelectedListener { position ->

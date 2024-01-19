@@ -39,7 +39,7 @@ class RecommendFragment : Fragment(){
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // inflate는 xml이 표기된 레이아웃들을 메모리에 로딩된 후 객체화 시키는 과정.
         _binding = FragmentRecommandBinding.inflate(inflater, container, false)
         setUpSlidingViewPager()
